@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars | Mars news & Info</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+   <style>
+     #mars_news{
+        padding-left:25px;
+        padding-right:25px;
+     }
+
+   </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1 class="display-1">Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Mars Data</a></p>
+     </div>
+
+    <div class = "row" id="mars_news"> 
+      <div class = "col-md-6">
+     <h2 class="display-3">Latest Mars News</h2>
+      <h4>{{mars.article_title}}</h4>
+      <p>{{mars.article_txt}}</p>
+    </div>
+    </div>
+  <div class = "row" id = "mars_news"> 
+    <div class = "col-md-6">
+      <h2>Featured Mars Image</h2>
+      <img src={{mars.featured_img_url}} alt="MarsFeaturedImage">
+    </div>
+    <div class = "col-md-6">
+      <h3>Mars Facts</h3>
+       {{mars.facts_tbl_html| safe}}
+    </div>
+  </div>
+  <div class = "row" id = "mars_hem"> 
+      <h2 class="display-3 text-center"> Mars Hemisphere</h2>
+  </div>
+  <div class = "row" id = "mars_hem"> 
+      <div class="d-flex justify-content-between">
+      <div class = "col-md-6 col-sm-12">
+        <div class="card mb-3">
+          <img src={{mars.hemisphere_img_dict[0].img_url|safe}} class="card-img-top" alt={{mars.hemisphere_img_dict[0].title}} style="width:100%;max-width:500px">
+          <div class="card-body">
+            <h5 class="card-title">{{mars.hemisphere_img_dict[0].title}}</h5>
+          </div>
+        </div>
+      </div>
+      <div class = "col-md-6 col-sm-12">
+        <div class="card mb-3">
+          <img src={{mars.hemisphere_img_dict[1].img_url}} class="card-img-top" alt={{mars.hemisphere_img_dict[1].title}} style="width:100%;max-width:500px">
+          <div class="card-body">
+            <h5 class="card-title">{{mars.hemisphere_img_dict[1].title}}</h5>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class = "row" id = "mars_hem"> 
+        <div class="d-flex justify-content-between">
+      <div class = "col-md-6 col-sm-12">
+        <div class="card mb-3">
+          <img src={{mars.hemisphere_img_dict[2].img_url}} class="card-img-top" alt={{mars.hemisphere_img_dict[2].title}} style="width:100%;max-width:500px">
+          <div class="card-body">
+            <h5 class="card-title">{{mars.hemisphere_img_dict[2].title}}</h5>
+          </div>
+        </div>
+      </div>
+    
+      <div class = "col-md-6 col-sm-12">
+        <div class="card mb-3 ">
+          <img src={{mars.hemisphere_img_dict[3].img_url}} class="card-img-top" alt={{mars.hemisphere_img_dict[3].title}} style="width:100%;max-width:500px">
+          <div class="card-body">
+            <h5 class="card-title">{{mars.hemisphere_img_dict[3].title}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+      <!-- Footer -->
+      <footer class="page-footer font-small blue ">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3  ">© 2021 Copyright:
+        <a href="https://github.com/tiffanyycheng99?tab=repositories"> Tiffany Cheng | Github | Data Analytics </a>
+        </div>
+        <!-- Copyright -->
+    
+    </footer>
+    <!-- Footer -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
