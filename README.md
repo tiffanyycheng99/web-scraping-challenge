@@ -1,6 +1,6 @@
 # 12. Web Scraping and Document Databases Homework 
 ### web-scraping-challenge
-![mission_to_mars](Images/mission_to_mars.png)
+
 In this assignment, we built a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. 
 
 Please find the following components to this homework as detailed below:
